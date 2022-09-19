@@ -1,0 +1,10 @@
+.customInput {
+  padding: 18px 5px;
+  color: #000;
+  border: 1px solid black;
+  background: transparent;
+}
+
+.big-input {
+  padding: 36px 10px;
+}
