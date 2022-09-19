@@ -1,10 +1,11 @@
 {
-  "name": "uikit",
+  "name": "uikit-oleg-test",
   "version": "1.0.0",
   "description": "Sletat UI kit",
   "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "pub": "webpack && npm version patch && npm publish",
     "webpack": "webpack"
   },
   "author": "Oleg Mikhaylov",
