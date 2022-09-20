@@ -1,5 +1,5 @@
 const path = require('path');
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: 'production',
@@ -11,7 +11,7 @@ module.exports = {
         clean: true
     },
     resolve: {
-        extensions: ['.ts', '.tsx']
+        extensions: ['.ts', '.tsx', '.scss']
     },
     externals: {
         react: 'react'
@@ -19,14 +19,40 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css/,
-                use: ['style-loader', 'css-loader'],
-            },
-            {
                 test: /\.(ts|tsx)?$/,
                 use: ['ts-loader'],
                 exclude: /node_modules/
+            },
+            {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+
+          {
+            loader: "css-loader",
+            options: {
+                modules: true,
+                sourceMap: false,
             }
-        ],
-    }
+          },
+
+          {
+            // First we transform SASS to standard CSS
+            loader: "sass-loader",
+            options: {
+              sourceMap: false,
+            }
+          }
+        ]
+      },
+    ],
+    },
+
+    plugins: [
+    new MiniCssExtractPlugin({
+      filename: "index.css"
+    }),
+  ]
 }

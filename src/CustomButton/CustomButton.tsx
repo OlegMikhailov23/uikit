@@ -1,5 +1,5 @@
 import React, { FC, ReactElement } from 'react';
-import './CustomButton.css';
+import styles from './CustomButton.module.scss';
 
 export interface CustomButtonProps {
   children: ReactElement,
@@ -8,12 +8,8 @@ export interface CustomButtonProps {
 }
 
 const CustomButton: FC<CustomButtonProps> = ({children, color, big, ...props}) => {
-  const rootClasses = ['btn']
-
-  if (big) rootClasses.push('big-btn');
-
   return (
-    <button className={rootClasses.join(' ')} style={{color: color}} {...props}>
+    <button className={`${styles.btn} ${big ? styles.bigBtn : ''}`} style={{color: color}} {...props}>
       {children}
     </button>
   );

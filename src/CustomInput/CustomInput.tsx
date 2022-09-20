@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './CustomInput.css';
+import styles from './CustomInput.module.scss';
 
 export interface CustomInputProps {
   big: boolean;
@@ -8,16 +8,10 @@ export interface CustomInputProps {
 }
 
 const CustomInput: FC<CustomInputProps> = ({big, placeholder, label, ...props}) => {
-  const classes = ['customInput'];
-
-  if (big) {
-    classes.push('big-input')
-  }
-
   return (
     <label>
       {label}
-      <input className={classes.join(' ')} placeholder={placeholder} {...props}  />
+      <input className = {`${styles.customInput} ${big ? styles.bigInput : ''}`} placeholder={placeholder} {...props}  />
     </label>
   );
 };
