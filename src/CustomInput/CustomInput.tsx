@@ -11,7 +11,7 @@ const CustomInput: FC<CustomInputProps> = ({big, placeholder, label, ...props}) 
   return (
     <label>
       {label}
-      <input placeholder={placeholder} {...props}  />
+      <input className={'customInput'} placeholder={placeholder} {...props}  />
     </label>
   );
 };
