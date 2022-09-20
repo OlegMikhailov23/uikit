@@ -10,7 +10,7 @@ module.exports = {
         clean: true
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.scss']
+        extensions: ['.ts', '.tsx']
     },
     externals: {
         react: 'react'
@@ -22,26 +22,28 @@ module.exports = {
                 use: ['ts-loader'],
                 exclude: /node_modules/
             },
-            {
+        {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          {
-            loader: "css-loader",
-            options: {
-                modules: {
-                    localIdentName: 'SLT-[folder]__[local]'
-                },
-                sourceMap: false,
-            }
-          },
-
-          {
-            // First we transform SASS to standard CSS
-            loader: "sass-loader",
-            options: {
-              sourceMap: false,
-            }
-          }
+        {
+            loader: 'style-loader',
+        },
+        {
+        loader: "css-loader",
+        options: {
+            modules: {
+                localIdentName: 'SLT-[folder]__[local]'
+            },
+            sourceMap: false,
+        }
+        },
+        {
+        // First we transform SASS to standard CSS
+        loader: "sass-loader",
+        options: {
+            sourceMap: false,
+        }
+        }
         ]
       },
     ],
