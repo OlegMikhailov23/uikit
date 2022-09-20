@@ -33,7 +33,9 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-                modules: true,
+                modules: {
+                    localIdentName: 'SLT-[folder]__[local]'
+                },
                 sourceMap: false,
             }
           },
@@ -51,8 +53,9 @@ module.exports = {
     },
 
     plugins: [
-    new MiniCssExtractPlugin({
-      filename: "index.css"
+        new MiniCssExtractPlugin({
+        filename: '[name].css',
+        chunkFilename: '[id].css'
     }),
   ]
 }
