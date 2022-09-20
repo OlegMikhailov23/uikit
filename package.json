@@ -1,6 +1,6 @@
 {
   "name": "uikit-oleg-test",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Sletat UI kit",
   "main": "./dist/index.js",
   "scripts": {
