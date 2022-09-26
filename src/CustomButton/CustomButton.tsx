@@ -1,5 +1,5 @@
-import React, { FC, ReactElement } from "react";
-import styles from "./CustomButton.module.scss";
+import React, { FC, ReactElement } from 'react'
+import styles from './CustomButton.module.scss'
 
 export interface CustomButtonProps {
   children: ReactElement;
@@ -16,13 +16,13 @@ const CustomButton: FC<CustomButtonProps> = ({
   return (
     <button
       type="button"
-      className={`${styles.btn} ${big ? styles.bigBtn : ""}`}
+      className={`${styles.btn} ${big ? styles.bigBtn : ''}`}
       style={{ color }}
       {...props}
     >
       {children}
     </button>
-  );
-};
+  )
+}
 
-export default CustomButton;
+export default CustomButton

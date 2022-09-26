@@ -3,21 +3,23 @@
     "tabWidth": 2,
     "trailingComma": "none",
     "parser": "babel",
-    "semi": true,
+    "semi": false,
     "htmlWhitespaceSensitivity": "css",
     "quoteProps": "as-needed",
-  "overrides": [
-    {
-      "files": "*.css",
-      "options": {
-        "parser": "css"
+    "singleQuote": true,
+    "useTabs": false,
+    "overrides": [
+      {
+        "files": "*.css",
+        "options": {
+          "parser": "css"
+        }
+      },
+      {
+        "files": "*.scss",
+        "options": {
+          "parser": "scss"
+        }
       }
-    },
-    {
-      "files": "*.scss",
-      "options": {
-        "parser": "scss"
-      }
-    }
-  ]
+    ]
 }
