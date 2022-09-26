@@ -4,7 +4,6 @@
   "description": "Sletat UI kit",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "pub": "webpack && npm version patch && npm publish",
     "webpack": "webpack",
     "_lint": "eslint --config ./.eslintrc.json --ext js --ext jsx --ext tsx --ext ts",
