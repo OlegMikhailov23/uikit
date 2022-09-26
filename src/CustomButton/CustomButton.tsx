@@ -10,13 +10,14 @@ export interface CustomButtonProps {
 const CustomButton: FC<CustomButtonProps> = ({
   children,
   color,
-  big,
+  big = false,
   ...props
 }) => {
   return (
     <button
+      type="button"
       className={`${styles.btn} ${big ? styles.bigBtn : ""}`}
-      style={{ color: color }}
+      style={{ color }}
       {...props}
     >
       {children}
