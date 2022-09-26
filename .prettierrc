@@ -3,7 +3,7 @@
     "tabWidth": 2,
     "trailingComma": "none",
     "parser": "babel",
-    "semi": false,
+    "semi": true,
     "htmlWhitespaceSensitivity": "css",
     "quoteProps": "as-needed",
     "singleQuote": true,
